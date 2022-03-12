@@ -19,13 +19,16 @@
 </template>
 
 <script>
+//Hash Table for Answers
+import mapAnswer from "@/helpers/mapAnswer.js";
+
 export default {
   name: "Indecision",
   data() {
     return {
       question: "",
       answer: null,
-      image: "https://media.giphy.com/media/aFTt8wvDtqKCQ/giphy.gif",
+      image: "/shiba_inu.gif",
       isValidQuestion: false,
     };
   },
@@ -43,41 +46,6 @@ export default {
   methods: {
     async getAnswer() {
       try {
-        //Hash Table
-        const mapAnswer = {
-          no: [
-            "Definitivamente no",
-            "No!",
-            "Para nada",
-            "Ni siquiera lo pienses",
-            "Ni soñando",
-            "No te hagas ilusiones",
-            "Nunca!",
-            "Jamás",
-            "Imposible",
-          ],
-          yes: [
-            "Claro que si",
-            "Por supuesto",
-            "Indudablemente",
-            "Obvio bobis",
-            "No lo dudes",
-            "Shi señor!",
-            "Si!",
-            "Definitivamente",
-            "Súper si",
-          ],
-          maybe: [
-            "Con esfuerzo y dedicación",
-            "El qué persevera alcanza",
-            "Quizás",
-            "No es claro... pero si seguro",
-            "Posiblemente",
-            "Habrá que averiguar",
-            "No tengo pruebas, pero si dudas",
-          ],
-        };
-
         this.answer = "Pensado...";
 
         const { answer, image } = await fetch("https://yesno.wtf/api").then(
@@ -91,7 +59,8 @@ export default {
 
         this.image = image;
       } catch (error) {
-        console.log(error);
+        this.image = "/error.gif";
+        this.answer = "Ups... una pregunta muy existencial (Error API)";
       }
     },
     getRandomNumber(max) {
