@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indecision Component debe ser igual al snapshot 1`] = `
+<img src="/shiba_inu.gif" alt="Background">
+<div class="indecision-container"><input type="text" name="question" id="question" placeholder="Escribe tu pregunta...">
+  <p>Recuerda terminar con un signo de interrogación (?)</p>
+  <div>
+    <h2></h2>
+    <!--v-if-->
+  </div>
+</div>
+`;
