@@ -1,0 +1,33 @@
+export default {
+  no: [
+    "Definitivamente no",
+    "No!",
+    "Para nada",
+    "Ni siquiera lo pienses",
+    "Ni soñando",
+    "No te hagas ilusiones",
+    "Nunca!",
+    "Jamás",
+    "Imposible",
+  ],
+  yes: [
+    "Claro que si",
+    "Por supuesto",
+    "Indudablemente",
+    "Obvio bobis",
+    "No lo dudes",
+    "Shi señor!",
+    "Si!",
+    "Definitivamente",
+    "Súper si",
+  ],
+  maybe: [
+    "Con esfuerzo y dedicación",
+    "El qué persevera alcanza",
+    "Quizás",
+    "No es claro... pero si seguro",
+    "Posiblemente",
+    "Habrá que averiguar",
+    "No tengo pruebas, pero si dudas",
+  ],
+};
